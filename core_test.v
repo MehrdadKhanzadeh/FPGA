@@ -25,7 +25,7 @@
 	end
 	
 	
-	always begin #11338 aclk=~aclk; 
+	always begin #10 aclk=~aclk; 
 	end
   
 	integer file_open;
@@ -53,7 +53,7 @@
 		if(!$feof(file_open)) begin
 			$display("%d\n",data_in);
 			s_axis_data_tdata<=data_in;
-			#10;
+			#100;
 			//s_axis_data_tvalid <=0;
 			
 		end
