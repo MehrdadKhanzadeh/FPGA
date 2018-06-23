@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 100ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module core_m( aclk, s_axis_data_tvalid, s_axis_data_tready, m_axis_data_tvalid, s_axis_data_tdata, m_axis_data_tdata
     );
-input aclk;
+  input aclk;
   input s_axis_data_tvalid;
   output s_axis_data_tready;
   output m_axis_data_tvalid;
