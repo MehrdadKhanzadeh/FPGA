@@ -6,7 +6,7 @@
 	reg signed [15:0] s_axis_data_tdata;
 	wire s_axis_data_tready;
 	wire m_axis_data_tvalid;
-	wire signed [33:0] m_axis_data_tdata;
+	  wire signed [15:0] m_axis_data_tdata;
 	
 	/*FIR_core U1(.aclk(aclk),.s_axis_data_tvalid(s_axis_data_tvalid),.s_axis_data_tdata(s_axis_data_tdata),
 	.s_axis_data_tready(s_axis_data_tready),.m_axis_data_tvalid(m_axis_data_tvalid),
