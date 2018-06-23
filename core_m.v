@@ -25,7 +25,7 @@ module core_m( aclk, s_axis_data_tvalid, s_axis_data_tready, m_axis_data_tvalid,
   output s_axis_data_tready;
   output m_axis_data_tvalid;
   input [15 : 0] s_axis_data_tdata;
-  output [33 : 0] m_axis_data_tdata;
+	output [15 : 0] m_axis_data_tdata;
 	FIR_core U1(.aclk(aclk),.s_axis_data_tvalid(s_axis_data_tvalid),.s_axis_data_tdata(s_axis_data_tdata),
 	.s_axis_data_tready(s_axis_data_tready),.m_axis_data_tvalid(m_axis_data_tvalid),
 	.m_axis_data_tdata(m_axis_data_tdata));
