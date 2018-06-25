@@ -25,7 +25,7 @@
 	end
 	
 	
-	always begin #10 aclk=~aclk; 
+	always begin #11338 aclk=~aclk; 
 	end
   
 	integer file_open;
