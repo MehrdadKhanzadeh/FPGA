@@ -1,0 +1,400 @@
+
+Started : "Translate".
+Running ngdbuild...
+Command Line: ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6slx9-tqg144-3 core_m.ngc core_m.ngd
+
+Command Line: C:\xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6slx9-tqg144-3
+core_m.ngc core_m.ngd
+
+Reading NGO file
+"C:/Users/javan/Documents/fpgaCode/fpga_ise/Core_xilinx/core_m.ngc" ...
+Loading design module "ipcore_dir/FIR_core.ngc"...
+Gathering constraint information from source properties...
+Done.
+
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+WARNING:NgdBuild:452 - logical net 'U1/blk00000001/blk000000dd/sig00000222' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'U1/blk00000001/blk000000dd/sig00000223' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'U1/blk00000001/blk000000dd/sig00000224' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'U1/blk00000001/blk000000dd/sig00000226' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'U1/blk00000001/blk000000dd/sig00000227' has
+   no driver
+WARNING:NgdBuild:452 - logical net 'U1/blk00000001/blk000000dd/sig00000228' has
+   no driver
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   6
+
+Writing NGD file "core_m.ngd" ...
+Total REAL time to NGDBUILD completion:  3 sec
+Total CPU time to NGDBUILD completion:   3 sec
+
+Writing NGDBUILD log file "core_m.bld"...
+
+NGDBUILD done.
+
+Process "Translate" completed successfully
+
+Started : "Map".
+Running map...
+Command Line: map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o core_m_map.ncd core_m.ngd core_m.pcf
+Using target part "6slx9tqg144-3".
+Mapping design into LUTs...
+Running directed packing...
+Running delay-based LUT packing...
+Updating timing models...
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+Running timing-driven placement...
+Total REAL time at the beginning of Placer: 4 secs 
+Total CPU  time at the beginning of Placer: 4 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:137bd) REAL time: 4 secs 
+
+Phase 2.7  Design Feasibility Check
+Phase 2.7  Design Feasibility Check (Checksum:137bd) REAL time: 4 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:137bd) REAL time: 4 secs 
+
+Phase 4.2  Initial Placement for Architecture Specific Features
+...
+....
+Phase 4.2  Initial Placement for Architecture Specific Features
+REAL time: 9 secs 
+
+Phase 5.36  Local Placement Optimization
+Phase 5.36  Local Placement Optimization (Checksum:b0f7d1cb) REAL time: 9 secs 
+
+(Checksum:b0f7d1cb) Phase 6.30  Global Clock Region Assignment
+Phase 6.30  Global Clock Region Assignment (Checksum:b0f7d1cb) REAL time: 9 secs 
+
+Phase 7.3  Local Placement Optimization
+...
+....
+Phase 7.3  Local Placement Optimization (Checksum:8685f5eb) REAL time: 12 secs 
+
+Phase 8.5  Local Placement Optimization
+Phase 8.5  Local Placement Optimization (Checksum:8685f5eb) REAL time: 12 secs 
+
+Phase 9.8  Global Placement
+..............
+.....................
+Phase 9.8  Global Placement (Checksum:d7f89355) REAL time: 12 secs 
+
+Phase 10.5  Local Placement Optimization
+Phase 10.5  Local Placement Optimization (Checksum:d7f89355) REAL time: 12 secs 
+
+Phase 11.18  Placement Optimization
+Phase 11.18  Placement Optimization (Checksum:fc09cc66) REAL time: 13 secs 
+
+Phase 12.5  Local Placement Optimization
+Phase 12.5  Local Placement Optimization (Checksum:fc09cc66) REAL time: 13 secs 
+
+Phase 13.34  Placement Validation
+Phase 13.34  Placement Validation (Checksum:fc09cc66) REAL time: 13 secs 
+
+Total REAL time to Placer completion: 13 secs 
+Total CPU  time to Placer completion: 13 secs 
+Running post-placement packing...
+Writing output files...
+
+Design Summary:
+Number of errors:      0
+Number of warnings:    0
+Slice Logic Utilization:
+  Number of Slice Registers:                   168 out of  11,440    1%
+    Number used as Flip Flops:                 168
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                         92 out of   5,720    1%
+    Number used as logic:                       49 out of   5,720    1%
+      Number using O6 output only:              19
+      Number using O5 output only:               0
+      Number using O5 and O6:                   30
+      Number used as ROM:                        0
+    Number used as Memory:                      39 out of   1,440    2%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:            39
+        Number using O6 output only:             7
+        Number using O5 output only:             0
+        Number using O5 and O6:                 32
+    Number used exclusively as route-thrus:      4
+      Number with same-slice register load:      4
+      Number with same-slice carry load:         0
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                    40 out of   1,430    2%
+  Number of MUXCYs used:                         8 out of   2,860    1%
+  Number of LUT Flip Flop pairs used:          105
+    Number with an unused Flip Flop:             3 out of     105    2%
+    Number with an unused LUT:                  13 out of     105   12%
+    Number of fully used LUT-FF pairs:          89 out of     105   84%
+    Number of unique control sets:               7
+    Number of slice register sites lost
+      to control set restrictions:               1 out of  11,440    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        54 out of     102   52%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of      32    0%
+  Number of RAMB8BWERs:                          0 out of      64    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       1 out of      16    6%
+    Number used as BUFGs:                        1
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     200    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     200    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     200    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            1 out of      16    6%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                2.48
+
+Peak Memory Usage:  4543 MB
+Total REAL time to MAP completion:  13 secs 
+Total CPU time to MAP completion:   13 secs 
+
+Mapping completed.
+See MAP report file "core_m_map.mrp" for details.
+
+Process "Map" completed successfully
+
+Started : "Place & Route".
+Running par...
+Command Line: par -w -intstyle ise -ol high -mt off core_m_map.ncd core_m.ncd core_m.pcf
+
+
+
+Constraints file: core_m.pcf.
+Loading device for application Rf_Device from file '6slx9.nph' in environment C:\xilinx\14.7\ISE_DS\ISE\.
+   "core_m" is an NCD, version 3.2, device xc6slx9, package tqg144, speed -3
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. Because there are not defined timing requirements, a timing score will not be
+   reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
+   Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
+
+Device speed data version:  "PRODUCTION 1.23 2013-10-13".
+
+
+
+Device Utilization Summary:
+
+Slice Logic Utilization:
+  Number of Slice Registers:                   168 out of  11,440    1%
+    Number used as Flip Flops:                 168
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                         92 out of   5,720    1%
+    Number used as logic:                       49 out of   5,720    1%
+      Number using O6 output only:              19
+      Number using O5 output only:               0
+      Number using O5 and O6:                   30
+      Number used as ROM:                        0
+    Number used as Memory:                      39 out of   1,440    2%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:            39
+        Number using O6 output only:             7
+        Number using O5 output only:             0
+        Number using O5 and O6:                 32
+    Number used exclusively as route-thrus:      4
+      Number with same-slice register load:      4
+      Number with same-slice carry load:         0
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                    40 out of   1,430    2%
+  Number of MUXCYs used:                         8 out of   2,860    1%
+  Number of LUT Flip Flop pairs used:          105
+    Number with an unused Flip Flop:             3 out of     105    2%
+    Number with an unused LUT:                  13 out of     105   12%
+    Number of fully used LUT-FF pairs:          89 out of     105   84%
+    Number of slice register sites lost
+      to control set restrictions:               0 out of  11,440    0%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        54 out of     102   52%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of      32    0%
+  Number of RAMB8BWERs:                          0 out of      64    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       1 out of      16    6%
+    Number used as BUFGs:                        1
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     200    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     200    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     200    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            1 out of      16    6%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 3 secs 
+Finished initial Timing Analysis.  REAL time: 3 secs 
+
+Starting Router
+
+
+     REAL time: 3 secs 
+Phase  1  : 787 unrouted; 
+     REAL time: 3 secs 
+Phase  2  : 519 unrouted; 
+     REAL time: 4 secs 
+Phase  3  : 85 unrouted; 
+(Par is working to improve performance)     REAL time: 5 secs 
+Phase  4  : 85 unrouted; 
+Updating file: core_m.ncd with current fully routed design.
+
+(Par is working to improve performance)     REAL time: 5 secs 
+
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+
+(Par is working to improve performance)     REAL time: 5 secs 
+Phase  5  : 0 unrouted; 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+Phase  9  : 0 unrouted; 
+(Par is working to improve performance)     REAL time: 5 secs 
+Phase 10  : 0 unrouted; Total REAL time to Router completion: 5 secs 
+Total CPU time to Router completion: 5 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+INFO:Par:459 - The Clock Report is not displayed in the non timing-driven mode.
+Timing Score: 0 (Setup: 0, Hold: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net acl | SETUP       |         N/A|     2.902ns|     N/A|           0
+  k_BUFGP                                   | HOLD        |     0.326ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 5 secs 
+Total CPU time to PAR completion: 5 secs 
+
+Peak Memory Usage:  4504 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 0
+Number of info messages: 2
+
+Writing design to file core_m.ncd
+
+
+
+PAR done!
+
+Process "Place & Route" completed successfully
+
+Started : "Generate Post-Place & Route Static Timing".
+Running trce...
+Command Line: trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml core_m.twx core_m.ncd -o core_m.twr core_m.pcf
+Loading device for application Rf_Device from file '6slx9.nph' in environment
+C:\xilinx\14.7\ISE_DS\ISE\.
+   "core_m" is an NCD, version 3.2, device xc6slx9, package tqg144, speed -3
+
+Analysis completed Mon Jun 25 09:11:41 2018
+--------------------------------------------------------------------------------
+
+Generating Report ...
+
+Number of warnings: 0
+Total time: 2 secs 
+
+Process "Generate Post-Place & Route Static Timing" completed successfully
