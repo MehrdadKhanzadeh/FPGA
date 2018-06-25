@@ -1,0 +1,231 @@
+
+Started : "Synthesize - XST".
+Running xst...
+Command Line: xst -intstyle ise -ifn "C:/Users/Mehrdad/Desktop/Programming/FPGA/Project/Phase1/FIR.xst" -ofn "C:/Users/Mehrdad/Desktop/Programming/FPGA/Project/Phase1/FIR.syr"
+Reading design: FIR.prj
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Mehrdad\Desktop\FPGA-master\FPGA-master\optmized_FIR.v" into library work
+Parsing module <FIR>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <FIR>.
+WARNING:HDLCompiler:872 - "C:\Users\Mehrdad\Desktop\FPGA-master\FPGA-master\optmized_FIR.v" Line 23: Using initial value of coefficient since it is never assigned
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <FIR>.
+    Related source file is "C:\Users\Mehrdad\Desktop\FPGA-master\FPGA-master\optmized_FIR.v".
+    Found 288-bit register for signal <n0045>.
+    Found 16-bit register for signal <m_axis_data_tdata>.
+    Found 27-bit adder for signal <GND_1_o_b[0][15]_add_3_OUT> created at line 57.
+    Found 28-bit adder for signal <GND_1_o_b[1][15]_add_5_OUT> created at line 57.
+    Found 30-bit adder for signal <GND_1_o_b[2][15]_add_7_OUT> created at line 57.
+    Found 31-bit adder for signal <GND_1_o_b[3][15]_add_9_OUT> created at line 57.
+Found 32-bit adder for signal <n0120> created at line 57.
+    Found 32-bit adder for signal <n0123> created at line 57.
+    Found 32-bit adder for signal <n0126> created at line 57.
+    Found 32-bit adder for signal <n0129> created at line 57.
+    Found 32-bit adder for signal <n0132> created at line 57.
+    Found 32-bit adder for signal <n0135> created at line 57.
+    Found 32-bit adder for signal <n0138> created at line 57.
+    Found 32-bit adder for signal <n0141> created at line 57.
+    Found 32-bit adder for signal <n0144> created at line 57.
+    Found 32-bit adder for signal <n0147> created at line 57.
+    Found 32-bit adder for signal <n0150> created at line 57.
+    Found 32-bit adder for signal <n0153> created at line 57.
+    Found 32-bit adder for signal <n0156> created at line 57.
+    Found 32-bit adder for signal <n0083> created at line 57.
+    Found 16x5-bit multiplier for signal <s_axis_data_tdata[15]_PWR_1_o_MuLt_1_OUT> created at line 54.
+    Found 16x10-bit multiplier for signal <b[0][15]_GND_1_o_MuLt_2_OUT> created at line 57.
+    Found 16x11-bit multiplier for signal <b[1][15]_GND_1_o_MuLt_4_OUT> created at line 57.
+    Found 16x13-bit multiplier for signal <b[2][15]_GND_1_o_MuLt_6_OUT> created at line 57.
+    Found 16x14-bit multiplier for signal <b[3][15]_GND_1_o_MuLt_8_OUT> created at line 57.
+    Found 16x15-bit multiplier for signal <b[4][15]_GND_1_o_MuLt_10_OUT> created at line 57.
+    Found 16x15-bit multiplier for signal <b[5][15]_GND_1_o_MuLt_12_OUT> created at line 57.
+    Found 16x15-bit multiplier for signal <b[6][15]_GND_1_o_MuLt_14_OUT> created at line 57.
+    Found 16x16-bit multiplier for signal <n0127> created at line 57.
+    Found 16x16-bit multiplier for signal <n0130> created at line 57.
+    Found 16x16-bit multiplier for signal <n0133> created at line 57.
+    Found 16x15-bit multiplier for signal <b[10][15]_GND_1_o_MuLt_22_OUT> created at line 57.
+    Found 16x15-bit multiplier for signal <b[11][15]_GND_1_o_MuLt_24_OUT> created at line 57.
+        Found 16x15-bit multiplier for signal <b[12][15]_GND_1_o_MuLt_26_OUT> created at line 57.
+    Found 16x14-bit multiplier for signal <b[13][15]_GND_1_o_MuLt_28_OUT> created at line 57.
+    Found 16x13-bit multiplier for signal <b[14][15]_GND_1_o_MuLt_30_OUT> created at line 57.
+    Found 16x11-bit multiplier for signal <b[15][15]_GND_1_o_MuLt_32_OUT> created at line 57.
+    Found 16x10-bit multiplier for signal <b[16][15]_GND_1_o_MuLt_34_OUT> created at line 57.
+    Found 16x6-bit multiplier for signal <b[17][15]_GND_1_o_MuLt_36_OUT> created at line 57.
+    WARNING:Xst:2404 -  FFs/Latches <valid<0:0>> (without init value) have a constant value of 1 in block <FIR>.
+    Summary:
+	inferred  19 Multiplier(s).
+	inferred  18 Adder/Subtractor(s).
+	inferred 304 D-type flip-flop(s).
+Unit <FIR> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 19
+ 16x10-bit multiplier                                  : 2
+ 16x11-bit multiplier                                  : 2
+ 16x13-bit multiplier                                  : 2
+ 16x14-bit multiplier                                  : 2
+ 16x15-bit multiplier                                  : 6
+ 16x16-bit multiplier                                  : 3
+ 16x5-bit multiplier                                   : 1
+ 16x6-bit multiplier                                   : 1
+# Adders/Subtractors                                   : 18
+ 27-bit adder                                          : 1
+ 28-bit adder                                          : 1
+ 30-bit adder                                          : 1
+ 31-bit adder                                          : 1
+ 32-bit adder                                          : 14
+# Registers                                            : 2
+ 16-bit register                                       : 1
+ 288-bit register                                      : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <FIR>.
+	The following adders/subtractors are grouped into adder tree <Madd_n0083_Madd1> :
+ 	<Madd_n0153_Madd> in block <FIR>, 	<Madd_n0156_Madd> in block <FIR>, 	<Madd_n0083_Madd> in block <FIR>.
+	The following adders/subtractors are grouped into adder tree <Madd_n01501> :
+ 	<Madd_GND_1_o_b[0][15]_add_3_OUT> in block <FIR>, 	<Madd_GND_1_o_b[1][15]_add_5_OUT> in block <FIR>, 	<Madd_GND_1_o_b[2][15]_add_7_OUT> in block <FIR>, 	<Madd_GND_1_o_b[3][15]_add_9_OUT> in block <FIR>, 	<Madd_n0120> in block <FIR>, 	<Madd_n0123> in block <FIR>, 	<Madd_n0126> in block <FIR>, 	<Madd_n0129> in block <FIR>, 	<Madd_n0132> in block <FIR>, 	<Madd_n0135> in block <FIR>, 	<Madd_n0138> in block <FIR>, 	<Madd_n0141> in block <FIR>, 	<Madd_n0144> in block <FIR>, 	<Madd_n0147> in block <FI
+R>, 	<Madd_n0150> in block <FIR>.
+	Multiplier <Mmult_b[17][15]_GND_1_o_MuLt_36_OUT> in block <FIR> and adder/subtractor <ADDER_FOR_MULTADD_Madd2> in block <FIR> are combined into a MAC<Maddsub_b[17][15]_GND_1_o_MuLt_36_OUT>.
+	The following registers are also absorbed by the MAC: <result> in block <FIR>.
+	Multiplier <Mmult_b[16][15]_GND_1_o_MuLt_34_OUT> in block <FIR> and adder/subtractor <ADDER_FOR_MULTADD_Madd1> in block <FIR> are combined into a MAC<Maddsub_b[16][15]_GND_1_o_MuLt_34_OUT>.
+	Multiplier <Mmult_b[15][15]_GND_1_o_MuLt_32_OUT> in block <FIR> and adder/subtractor <ADDER_FOR_MULTADD_Madd> in block <FIR> are combined into a MAC<Maddsub_b[15][15]_GND_1_o_MuLt_32_OUT>.
+	Multiplier <Mmult_b[14][15]_GND_1_o_MuLt_30_OUT> in block <FIR> and adder/subtractor <ADDER_FOR_MULTADD_Madd17> in block <FIR> are combined into a MAC<Maddsub_b[14][15]_GND_1_o_MuLt_30_OUT>.
+	Multiplier <Mmult_b[13][15]_GND_1_o_MuLt_28_OUT> in block <FIR> and adder/subtractor <ADDER_FOR_MULTADD_Madd16> in block <FIR> are combined into a MAC<Maddsub_b[13][15]_GND_1_o_MuLt_28_OUT>.
+	Multiplier <Mmult_b[12][15]_GND_1_o_MuLt_26_OUT> in block <FIR> and adder/subtractor <ADDER_FOR_MULTADD_Madd15> in block <FIR> are combined into a MAC<Maddsub_b[12][15]_GND_1_o_MuLt_26_OUT>.
+	Multiplier <Mmult_b[11][15]_GND_1_o_MuLt_24_OUT> in block <FIR> and adder/subtractor <ADDER_FOR_MULTADD_Madd14> in block <FIR> are combined into a MAC<Maddsub_b[11][15]_GND_1_o_MuLt_24_OUT>.
+	Multiplier <Mmult_b[10][15]_GND_1_o_MuLt_22_OUT> in block <FIR> and adder/subtractor <ADDER_FOR_MULTADD_Madd13> in block <FIR> are combined into a MAC<Maddsub_b[10][15]_GND_1_o_MuLt_22_OUT>.
+	Multiplier <Mmult_n0133> in block <FIR> and adder/subtractor <ADDER_FOR_MULTADD_Madd12> in block <FIR> are combined into a MAC<Maddsub_n0133>.
+	Multiplier <Mmult_n0130> in block <FIR> and adder/subtractor <ADDER_FOR_MULTADD_Madd11> in block <FIR> are combined into a MAC<Maddsub_n0130>.
+	Multiplier <Mmult_n0127> in block <FIR> and adder/subtractor <ADDER_FOR_MULTADD_Madd10> in block <FIR> are combined into a MAC<Maddsub_n0127>.
+	Multiplier <Mmult_b[6][15]_GND_1_o_MuLt_14_OUT> in block <FIR> and adder/subtractor <ADDER_FOR_MULTADD_Madd9> in block <FIR> are combined into a MAC<Maddsub_b[6][15]_GND_1_o_MuLt_14_OUT>.
+	Multiplier <Mmult_b[5][15]_GND_1_o_MuLt_12_OUT> in block <FIR> and adder/subtractor <ADDER_FOR_MULTADD_Madd8> in block <FIR> are combined into a MAC<Maddsub_b[5][15]_GND_1_o_MuLt_12_OUT>.
+	Multiplier <Mmult_b[4][15]_GND_1_o_MuLt_10_OUT> in block <FIR> and adder/subtractor <ADDER_FOR_MULTADD_Madd7> in block <FIR> are combined into a MAC<Maddsub_b[4][15]_GND_1_o_MuLt_10_OUT>.
+	Multiplier <Mmult_b[3][15]_GND_1_o_MuLt_8_OUT> in block <FIR> and adder/subtractor <ADDER_FOR_MULTADD_Madd6> in block <FIR> are combined into a MAC<Maddsub_b[3][15]_GND_1_o_MuLt_8_OUT>.
+	Multiplier <Mmult_b[2][15]_GND_1_o_MuLt_6_OUT> in block <FIR> and adder/subtractor <ADDER_FOR_MULTADD_Madd5> in block <FIR> are combined into a MAC<Maddsub_b[2][15]_GND_1_o_MuLt_6_OUT>.
+	Multiplier <Mmult_b[1][15]_GND_1_o_MuLt_4_OUT> in block <FIR> and adder/subtractor <ADDER_FOR_MULTADD_Madd4> in block <FIR> are combined into a MAC<Maddsub_b[1][15]_GND_1_o_MuLt_4_OUT>.
+	Multiplier <Mmult_b[0][15]_GND_1_o_MuLt_2_OUT> in block <FIR> and adder/subtractor <ADDER_FOR_MULTADD_Madd3> in block <FIR> are combined into a MAC<Maddsub_b[0][15]_GND_1_o_MuLt_2_OUT>.
+Unit <FIR> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# MACs                                                 : 18
+ 16x10-to-16-bit MAC                                   : 1
+ 16x10-to-32-bit MAC                                   : 1
+ 16x11-to-16-bit MAC                                   : 1
+ 16x11-to-32-bit MAC                                   : 1
+ 16x13-to-32-bit MAC                                   : 2
+ 16x14-to-32-bit MAC                                   : 2
+ 16x15-to-32-bit MAC                                   : 6
+ 16x16-to-32-bit MAC                                   : 3
+ 16x6-to-16-bit MAC                                    : 1
+# Multipliers                                          : 1
+ 16x5-bit multiplier                                   : 1
+# Registers                                            : 288
+ Flip-Flops                                            : 288
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <b_0_271> of sequential type is unconnected in block <FIR>.
+WARNING:Xst:2677 - Node <b_0_287> of sequential type is unconnected in block <FIR>.
+
+Optimizing unit <FIR> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block FIR, actual ratio is 27.
+
+Final Macro Processing ...
+
+Processing Unit <FIR> :
+	Found 2-bit shift register for signal <b_0_31>.
+	Found 2-bit shift register for signal <b_0_61>.
+	Found 2-bit shift register for signal <b_0_62>.
+	Found 2-bit shift register for signal <b_0_63>.
+	Found 2-bit shift register for signal <b_0_126>.
+	Found 2-bit shift register for signal <b_0_158>.
+	Found 2-bit shift register for signal <b_0_190>.
+	Found 8-bit shift register for signal <b_0_207>.
+	Found 2-bit shift register for signal <b_0_253>.
+	Found 2-bit shift register for signal <b_0_254>.
+	Found 2-bit shift register for signal <b_0_255>.
+Unit <FIR> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 274
+ Flip-Flops                                            : 274
+# Shift Registers                                      : 11
+ 2-bit shift register                                  : 10
+ 8-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+temp(temp1:O)                      | BUFG(*)(b_0_0)         | 296   |
+-----------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 22.011ns (Maximum Frequency: 45.432MHz)
+   Minimum input arrival time before clock: 25.006ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
+
+=========================================================================
+
+Process "Synthesize - XST" completed successfully
